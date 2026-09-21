@@ -56,6 +56,7 @@ Use the [Stage 7 actions guide](<notes and research/onboarding-actions-guide.md>
 The original Online Boutique application was developed by Google and its upstream contributors. Akansof's adaptations are documented in [UPSTREAM.md](../UPSTREAM.md), alongside the retained [Apache 2.0 licence](../LICENSE).
 
 - [Local development](local-development/README.md)
+- [Product architecture](architecture.md)
 - [Onboarding research](<notes and research/onboarding-research.md>)
 - [Service communication flows](<notes and research/interservice-communication-flows.md>)
 - [Cloud handover guide](cloud-handover/README.md)

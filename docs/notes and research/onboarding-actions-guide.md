@@ -74,11 +74,11 @@ The [critical user journey](../critical-user-journey.md), `SE-CUJ-001`, specifie
 
 ## 6. Create a product architecture diagram
 
-**Status: Upstream diagram and communication notes exist; ShopEase deployment view is pending.**
+**Status: Diagrams complete; validation against the deployed environment is pending.**
 
-Use the [communication study](interservice-communication-flows.md) and [upstream diagram](../img/architecture-diagram.png) as references. Create a simple Mermaid diagram showing the shopper, ingress, frontend, service dependencies, and Redis. Mark the external entry point and where state lives. Show the delivery pipeline separately if useful.
+The [product architecture](../architecture.md) shows the shopper entry point, service dependencies, Redis state, and planned PlatformOne placement. A separate diagram shows CI, ECR, GitOps, Argo CD, and verification. Connections and ports were checked against source configuration; planned deployment behavior is explicitly identified.
 
-**Done when:** the diagram explains the deployed design and agrees with its service connections.
+**Definition complete when:** diagrams explain the intended design and agree with source connections. Confirm and update them against the actual deployment during actions 9–12.
 
 ## 7. Create the CI workflow
 

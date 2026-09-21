@@ -8,6 +8,7 @@ Start here to find application guides, deployment-readiness research, and the or
 | --- | --- |
 | Understand ShopEase, its users, ownership, and scope | [Product overview](product-overview.md) |
 | Verify that a shopper can complete a purchase | [Critical user journey](critical-user-journey.md) |
+| See the application dependencies and planned delivery path | [Product architecture](architecture.md) |
 | Continue Stage 7 and understand the remaining actions | [Onboarding actions guide](<notes and research/onboarding-actions-guide.md>) |
 | Run the application locally | [Local development](local-development/README.md) |
 | Understand service calls and shopper request flows | [Interservice communication flows](<notes and research/interservice-communication-flows.md>) |
@@ -22,6 +23,7 @@ docs/
   README.md                  Start here
   product-overview.md        ShopEase purpose, users, ownership, and scope
   critical-user-journey.md   Repeatable purchase steps and pass/fail checks
+  architecture.md           Application and planned delivery diagrams
   local-development/         Running services, troubleshooting, and session evidence
   cloud-handover/            Readiness checklist and 18 detailed research chapters
   notes and research/        Onboarding decisions, service flows, and platform notes
