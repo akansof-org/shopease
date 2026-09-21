@@ -5,6 +5,7 @@ ShopEase is Akansof's fork of [Google's Online Boutique](https://github.com/Goog
 The original application remains credited to its upstream authors and retains its [Apache 2.0 licence](LICENSE). See [UPSTREAM.md](UPSTREAM.md) for the exact starting commit, modification history, and upstream update process.
 
 - [ShopEase documentation](docs/README.md)
+- [Product overview](docs/product-overview.md)
 - [Stage 7 actions guide](<docs/notes and research/onboarding-actions-guide.md>)
 
 ## Original Online Boutique documentation

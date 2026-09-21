@@ -1,6 +1,7 @@
 # ShopEase Stage 7: actions guide
 
-Recorded: 2026-09-21  
+Recorded: 2026-09-21
+
 Purpose: Explain each action, what already exists, and what will count as done.
 
 [Documentation home](../README.md) · [Onboarding research](onboarding-research.md) · [Cloud handover guide](../cloud-handover/README.md)
@@ -57,9 +58,9 @@ Preserve upstream licence and copyright notices. `UPSTREAM.md` explains provenan
 
 ## 4. Create the product overview
 
-**Status: Research exists; a dedicated ShopEase overview is pending.**
+**Status: Complete — 2026-09-21.**
 
-Write a short `docs/product-overview.md`: what ShopEase does, who the shopper is, who owns it, and what the demonstration covers. State that payments, shipping, and email are simulated. The inherited upstream purpose document is not this ShopEase overview.
+The [ShopEase product overview](../product-overview.md) explains what the product does, its users, team responsibilities, demonstration goals, and initial scope. It distinguishes simulated commerce from real transactions and planned deployment work from completed setup. The upstream purpose document remains preserved separately.
 
 **Done when:** someone unfamiliar with the project understands it in a few minutes.
 
