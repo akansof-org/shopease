@@ -14,7 +14,7 @@ Source observations below come from the downloaded upstream checkout inspected d
 
 Online Boutique supports browsing products, managing a cart, and completing a simulated purchase. Payment, shipping, and email are mocked. The default frontend uses shopper sessions without requiring account registration.
 
-Source: [Downloaded upstream README](../../../../04-products/shopease/README.md).
+Source: [Downloaded upstream README](../../README.md).
 
 ### Proposed answer
 
@@ -100,7 +100,7 @@ PlatformOne's existing registry strategy uses local image import for development
 Sources:
 
 - [PlatformOne local registry strategy](../../../../02-platformone/platformone-local-lab/registry/local-registry-strategy.md)
-- [Upstream build configuration](../../../../04-products/shopease/skaffold.yaml)
+- [Upstream build configuration](../../skaffold.yaml)
 - [ECR tag immutability](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-tag-mutability.html)
 - [ECR authentication](https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry_auth.html)
 
@@ -146,7 +146,7 @@ The services handle different types of demand. The following are scaling candida
 | Email | Demand follows completed orders. |
 | Load generator | Produces test demand and must be controlled independently. |
 
-Source: [Upstream service descriptions](../../../../04-products/shopease/README.md).
+Source: [Upstream service descriptions](../../README.md).
 
 ### Proposed answer
 
@@ -177,9 +177,9 @@ Other relevant distinctions:
 
 Sources:
 
-- [Cart and Redis manifest](../../../../04-products/shopease/kubernetes-manifests/cartservice.yaml)
-- [Catalog data](../../../../04-products/shopease/src/productcatalogservice/products.json)
-- [Checkout implementation](../../../../04-products/shopease/src/checkoutservice/main.go)
+- [Cart and Redis manifest](../../kubernetes-manifests/cartservice.yaml)
+- [Catalog data](../../src/productcatalogservice/products.json)
+- [Checkout implementation](../../src/checkoutservice/main.go)
 
 ### Proposed answer
 
@@ -205,7 +205,7 @@ Environment differences affect deployment behavior and integrations. The same ap
 
 Sources:
 
-- [Upstream frontend configuration](../../../../04-products/shopease/kubernetes-manifests/frontend.yaml)
+- [Upstream frontend configuration](../../kubernetes-manifests/frontend.yaml)
 - [PlatformOne GitOps repository structure](../../../../02-platformone/platformone-gitops/docs/repository-structure.md)
 
 ### Proposed answer
@@ -279,8 +279,8 @@ Checkout ignores the returned cart-clearing error and logs email errors without 
 
 Sources:
 
-- [Checkout implementation](../../../../04-products/shopease/src/checkoutservice/main.go)
-- [Frontend handlers](../../../../04-products/shopease/src/frontend/handlers.go)
+- [Checkout implementation](../../src/checkoutservice/main.go)
+- [Frontend handlers](../../src/frontend/handlers.go)
 
 ### Proposed answer
 

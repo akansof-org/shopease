@@ -136,6 +136,8 @@ Find **Protocol Buffers Descriptions** at the [`./protos` directory](/protos).
 
 ## Documentation
 
+- [ShopEase documentation guide](docs/README.md): local development, cloud handover, and onboarding research.
+
 - [Development](/docs/development-guide.md) to learn how to run and develop this app locally.
 
 ## Demos featuring Online Boutique
