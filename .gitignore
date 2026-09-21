@@ -27,3 +27,13 @@ pkg/
 release/wi-kubernetes-manifests.yaml
 vendor/
 gha-creds-*.json
+
+# Local .NET publish outputs (second path has a trailing U+200B).
+/src/cartservice/publish/
+/src/cartservice/publish​/
+
+# Local Go service executables
+/src/checkoutservice/checkoutservice
+/src/frontend/frontend
+/src/productcatalogservice/productcatalogservice
+/src/shippingservice/shippingservice
