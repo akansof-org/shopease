@@ -1,0 +1,121 @@
+services:
+  redis-cart:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+  productcatalogservice:
+    build:
+      context: ./src/productcatalogservice
+    environment:
+      PORT: "3550"
+      DISABLE_PROFILER: "1"
+
+  currencyservice:
+    build:
+      context: ./src/currencyservice
+    environment:
+      PORT: "7000"
+      DISABLE_PROFILER: "1"
+
+  cartservice:
+    build:
+      context: ./src/cartservice/src
+    environment:
+      REDIS_ADDR: "redis-cart:6379"
+    depends_on:
+      - redis-cart
+
+  shippingservice:
+    build:
+      context: ./src/shippingservice
+    environment:
+      PORT: "50051"
+      DISABLE_PROFILER: "1"
+
+  paymentservice:
+    build:
+      context: ./src/paymentservice
+    environment:
+      PORT: "50051"
+      DISABLE_PROFILER: "1"
+
+  emailservice:
+    build:
+      context: ./src/emailservice
+    environment:
+      PORT: "5000"
+      DISABLE_PROFILER: "1"
+
+  checkoutservice:
+    build:
+      context: ./src/checkoutservice
+    environment:
+      PORT: "5050"
+      PRODUCT_CATALOG_SERVICE_ADDR: "productcatalogservice:3550"
+      SHIPPING_SERVICE_ADDR: "shippingservice:50051"
+      PAYMENT_SERVICE_ADDR: "paymentservice:50051"
+      EMAIL_SERVICE_ADDR: "emailservice:5000"
+      CURRENCY_SERVICE_ADDR: "currencyservice:7000"
+      CART_SERVICE_ADDR: "cartservice:7070"
+    depends_on:
+      - productcatalogservice
+      - shippingservice
+      - paymentservice
+      - emailservice
+      - currencyservice
+      - cartservice
+
+  recommendationservice:
+    build:
+      context: ./src/recommendationservice
+    environment:
+      PORT: "8080"
+      PRODUCT_CATALOG_SERVICE_ADDR: "productcatalogservice:3550"
+      DISABLE_PROFILER: "1"
+    depends_on:
+      - productcatalogservice
+
+  adservice:
+    build:
+      context: ./src/adservice
+    environment:
+      PORT: "9555"
+
+  frontend:
+    build:
+      context: ./src/frontend
+    ports:
+      - "8080:8080"
+    environment:
+      PORT: "8080"
+      ENV_PLATFORM: "local"
+      ENABLE_PROFILER: "0"
+      PRODUCT_CATALOG_SERVICE_ADDR: "productcatalogservice:3550"
+      CURRENCY_SERVICE_ADDR: "currencyservice:7000"
+      CART_SERVICE_ADDR: "cartservice:7070"
+      RECOMMENDATION_SERVICE_ADDR: "recommendationservice:8080"
+      SHIPPING_SERVICE_ADDR: "shippingservice:50051"
+      CHECKOUT_SERVICE_ADDR: "checkoutservice:5050"
+      AD_SERVICE_ADDR: "adservice:9555"
+      SHOPPING_ASSISTANT_SERVICE_ADDR: "shoppingassistantservice:80"
+    depends_on:
+      - productcatalogservice
+      - currencyservice
+      - cartservice
+      - recommendationservice
+      - shippingservice
+      - checkoutservice
+      - adservice
+
+  loadgenerator:
+    build:
+      context: ./src/loadgenerator
+    environment:
+      FRONTEND_ADDR: "frontend:8080"
+      USERS: "10"
+      RATE: "1"
+    depends_on:
+      - frontend
+    profiles:
+      - loadtest
