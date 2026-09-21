@@ -16,7 +16,7 @@ The central journey is:
 
 The application also provides currency conversion, recommendations, advertising, and shipping estimates. Shoppers use sessions without creating an account. Payment, shipping, and email are simulated; the demo does not charge real cards, dispatch goods, or deliver real confirmation emails.
 
-The detailed journey and repeatable pass/fail checks are the next onboarding action. This overview establishes the intended experience, not completed test evidence.
+The [critical user journey](critical-user-journey.md) defines repeatable test data, steps, and pass/fail checks. Its runtime execution is pending; the definition is not completed test evidence.
 
 ## Why Akansof is onboarding it
 

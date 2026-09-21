@@ -66,9 +66,9 @@ The [ShopEase product overview](../product-overview.md) explains what the produc
 
 ## 5. Define the critical user journey
 
-**Status: Proposed in the onboarding research; needs an agreed test definition.**
+**Status: Definition complete; runtime execution and automation are pending.**
 
-Document: **browse → view product → add to cart → review totals → checkout → order confirmation → empty cart**. Use synthetic shopper details. Specify expected items, quantities, totals, confirmation, and resulting cart state.
+The [critical user journey](../critical-user-journey.md), `SE-CUJ-001`, specifies **browse → view product → add to cart → review totals → checkout → order confirmation → empty cart**. It includes synthetic test data, source-grounded expected values, pass/fail checks, an execution timeout, and an evidence template.
 
 **Done when:** the same journey can be repeated with clear pass/fail checks, initially manually and then automatically.
 
