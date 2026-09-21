@@ -6,6 +6,7 @@ Start here to find application guides, deployment-readiness research, and the or
 
 | I want to… | Read |
 | --- | --- |
+| Continue Stage 7 and understand the remaining actions | [Onboarding actions guide](<notes and research/onboarding-actions-guide.md>) |
 | Run the application locally | [Local development](local-development/README.md) |
 | Understand service calls and shopper request flows | [Interservice communication flows](<notes and research/interservice-communication-flows.md>) |
 | Prepare the application for a platform handover | [Cloud handover guide](cloud-handover/README.md) |

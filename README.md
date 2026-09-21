@@ -1,3 +1,16 @@
+# ShopEase
+
+ShopEase is Akansof's fork of [Google's Online Boutique](https://github.com/GoogleCloudPlatform/microservices-demo), a microservices demo originally developed by Google and the upstream contributors. Akansof's additions support local development and PlatformOne onboarding.
+
+The original application remains credited to its upstream authors and retains its [Apache 2.0 licence](LICENSE). See [UPSTREAM.md](UPSTREAM.md) for the exact starting commit, modification history, and upstream update process.
+
+- [ShopEase documentation](docs/README.md)
+- [Stage 7 actions guide](<docs/notes and research/onboarding-actions-guide.md>)
+
+## Original Online Boutique documentation
+
+The following material and CI badge describe the upstream project. The badge is not evidence of ShopEase CI status.
+
 <!-- <p align="center">
 <img src="/src/frontend/static/icons/Hipster_HeroLogoMaroon.svg" width="300" alt="Online Boutique" />
 </p> -->

@@ -326,3 +326,7 @@ The existing downloaded checkout was relocated intact into `04-products/shopease
 ### Documentation consolidation
 
 The onboarding research was moved to `docs/notes and research/onboarding-research.md`. The redundant `docs/shopease/` wrapper and its README were removed; the repository ownership and layout decisions are retained here.
+
+## Attribution record — 2026-09-21
+
+The fork is now `akansof-org/shopease`, with `origin` pointing to the fork and `upstream` to Google’s repository. [UPSTREAM.md](../../UPSTREAM.md) records the actual starting commit `9a4616e77f0f9cbcbecaf27d711c38890dda1404`, retained licence, and Akansof modifications. This supersedes the earlier pending-fork status. The proposed release-tag baseline was not applied; existing work was preserved on its original history. Build and scan validation remain separate actions.

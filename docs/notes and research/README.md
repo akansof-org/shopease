@@ -4,6 +4,7 @@
 
 | Document | What it contains | Status |
 | --- | --- | --- |
+| [Stage 7 actions guide](onboarding-actions-guide.md) | What each onboarding action means, its current status, and what counts as done | Working guide |
 | [Onboarding research](onboarding-research.md) | Nine Stage 7 questions, sources, proposed answers, and repository-layout decisions | Draft research with explicitly recorded decisions |
 | [Interservice communication flows](interservice-communication-flows.md) | gRPC, service addressing, shopper request flows, and code references | Technical study dated 2026-08-04 |
 | [Laptop Kubernetes foundation](laptop-kubernetes-foundation.md) | Platform foundation topics and initial notes | Incomplete working outline |
