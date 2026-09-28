@@ -1,0 +1,32 @@
+name: ShopEase CI
+
+on:
+  push:
+    branches:
+      - feat/shopease-onboarding
+  pull_request:
+    branches:
+        - main
+
+permissions:
+  contents: read
+
+jobs:
+  repository-check:
+    name: Check repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Verify application files
+        run: |
+          pwd
+          ls
+          test -f src/frontend/Dockerfile
+          test -f src/productcatalogservice/go.mod
+          echo "Expected application files are present."
