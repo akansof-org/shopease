@@ -30,3 +30,26 @@ jobs:
           test -f src/frontend/Dockerfile
           test -f src/productcatalogservice/go.mod
           echo "Expected application files are present."
+
+  catalog-tests:
+    name: Test product catalog
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version-file: /src/productcatalogservice/go.mod
+          cache-dependency-path: src/productcatalogservice/go.sum
+
+      - name: Run catalog tests
+        working-directory: src/productcatalogservice
+        run: |
+          go version
+          go test -v -count=1 ./...
