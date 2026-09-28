@@ -45,7 +45,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v6
         with:
-          go-version-file: /src/productcatalogservice/go.mod
+          go-version-file: src/productcatalogservice/go.mod
           cache-dependency-path: src/productcatalogservice/go.sum
 
       - name: Run catalog tests
