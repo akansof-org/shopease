@@ -53,3 +53,43 @@ jobs:
         run: |
           go version
           go test -v -count=1 ./...
+  go-tests:
+    name: Test ${{ matrix.target }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - target: product-catalog
+            directory: src/productcatalogservice
+            packages: ./...
+
+          - target: shipping
+            directory: src/shippingservice
+            packages: ./...
+
+          - target: frontend-validator
+            directory: src/frontend
+            packages: ./validator/...
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version-file: ${{ matrix.directory }}/go.mod
+          cache-dependency-path: ${{ matrix.directory }}/go.sum
+
+      - name: Run tests
+        working-directory: ${{ matrix.directory }}
+        env:
+          TEST_PACKAGES: ${{ matrix.packages }}
+        run: |
+          go version
+          go test -v -count=1 "$TEST_PACKAGES"
